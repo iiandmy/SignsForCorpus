@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1EED6BFE0EE496820099B178 /* Pods_SignsForCorpus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65FCDB33C029D94F234DB1F /* Pods_SignsForCorpus.framework */; };
+		9AC10677288B3CAE00D65184 /* UIAlertController+ConvinienceMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC10676288B3CAE00D65184 /* UIAlertController+ConvinienceMethods.swift */; };
+		9AC10679288B4FDF00D65184 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC10678288B4FDF00D65184 /* ModuleBuilder.swift */; };
 		DC4970B362F74C090ACF4143 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4972DC32992962B9F772C7 /* City.swift */; };
-		DC4970CCF3DA6606B0E29D60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC497BA9669702A78A52177A /* ViewController.swift */; };
+		DC4970CCF3DA6606B0E29D60 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC497BA9669702A78A52177A /* CitiesViewController.swift */; };
 		DC497144F9DB1B53086B63E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC497BD5AA9BDDD46D5F93F7 /* SceneDelegate.swift */; };
 		DC497150D02429A97A373211 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4970EE882D8F1BF387BABF /* NetworkClient.swift */; };
 		DC4974DA7DBCB46456AB669F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC49781D6C235D6B61BA7B59 /* AppDelegate.swift */; };
 		DC49758D4F16F01F0A0809CB /* String+HTMLEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC497CB711AE671A14A235B3 /* String+HTMLEncoding.swift */; };
+		DC4975C1A35E5803641B18CD /* CitiesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC497229CC5D1684D888D579 /* CitiesPresenter.swift */; };
 		DC4975C735352C1B61A5D64D /* SignDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC497A48A9267568B6E9C9B2 /* SignDTO.swift */; };
 		DC4977422D8AB13E1E0F1D65 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC49712E613016FCF9941B41 /* API.swift */; };
 		DC497A2E29456A2B9439E9FB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC497E3BD5456D80CFBDD30B /* Config.swift */; };
@@ -26,11 +29,14 @@
 /* Begin PBXFileReference section */
 		2FA7C3838FBDD3710757ECBE /* Pods-SignsForCorpus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignsForCorpus.debug.xcconfig"; path = "Target Support Files/Pods-SignsForCorpus/Pods-SignsForCorpus.debug.xcconfig"; sourceTree = "<group>"; };
 		7EE35683EBC6D4520C42E6B9 /* Pods-SignsForCorpus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignsForCorpus.release.xcconfig"; path = "Target Support Files/Pods-SignsForCorpus/Pods-SignsForCorpus.release.xcconfig"; sourceTree = "<group>"; };
+		9AC10676288B3CAE00D65184 /* UIAlertController+ConvinienceMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+ConvinienceMethods.swift"; sourceTree = "<group>"; };
+		9AC10678288B4FDF00D65184 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		C65FCDB33C029D94F234DB1F /* Pods_SignsForCorpus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignsForCorpus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC49701EB7C839BF7526931C /* Sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
 		DC497062BB8E80A243D429E1 /* SignsForCorpus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignsForCorpus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC4970EE882D8F1BF387BABF /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		DC49712E613016FCF9941B41 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		DC497229CC5D1684D888D579 /* CitiesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesPresenter.swift; sourceTree = "<group>"; };
 		DC4972DC32992962B9F772C7 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		DC4975E99D4AA5E86E94033D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		DC4976652DDA858199A0C93B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,7 +44,7 @@
 		DC497A11FEEF389BFD127F01 /* CityDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDTO.swift; sourceTree = "<group>"; };
 		DC497A48A9267568B6E9C9B2 /* SignDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignDTO.swift; sourceTree = "<group>"; };
 		DC497B64740F0A0AE1501B5F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DC497BA9669702A78A52177A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DC497BA9669702A78A52177A /* CitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
 		DC497BD5AA9BDDD46D5F93F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DC497CB711AE671A14A235B3 /* String+HTMLEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HTMLEncoding.swift"; sourceTree = "<group>"; };
 		DC497E3BD5456D80CFBDD30B /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -62,8 +68,15 @@
 				2FA7C3838FBDD3710757ECBE /* Pods-SignsForCorpus.debug.xcconfig */,
 				7EE35683EBC6D4520C42E6B9 /* Pods-SignsForCorpus.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9AC1067A288B4FE200D65184 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				9AC10678288B4FDF00D65184 /* ModuleBuilder.swift */,
+			);
+			path = Builder;
 			sourceTree = "<group>";
 		};
 		B2B5913BC003D3ADDEEB9FE4 /* Frameworks */ = {
@@ -78,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				DC497CB711AE671A14A235B3 /* String+HTMLEncoding.swift */,
+				9AC10676288B3CAE00D65184 /* UIAlertController+ConvinienceMethods.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -105,6 +119,7 @@
 		DC49744500F452EB3C7BCB6D /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				DC497229CC5D1684D888D579 /* CitiesPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -143,13 +158,13 @@
 			path = DTO;
 			sourceTree = "<group>";
 		};
-		DC497BF739909853B1E32749 /* CountriesModule */ = {
+		DC497BF739909853B1E32749 /* CitiesModule */ = {
 			isa = PBXGroup;
 			children = (
 				DC497CA306BD6A2EEE1AC119 /* View */,
 				DC49744500F452EB3C7BCB6D /* Presenter */,
 			);
-			path = CountriesModule;
+			path = CitiesModule;
 			sourceTree = "<group>";
 		};
 		DC497C517B1A422F31E0B5A5 /* Products */ = {
@@ -163,7 +178,7 @@
 		DC497CA306BD6A2EEE1AC119 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DC497BA9669702A78A52177A /* ViewController.swift */,
+				DC497BA9669702A78A52177A /* CitiesViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,11 +188,12 @@
 			children = (
 				DC4978C92213A37EB55D2691 /* Resources */,
 				DC497EFAD2C8506D01EC67FF /* BuildFiles */,
-				DC497BF739909853B1E32749 /* CountriesModule */,
+				DC497BF739909853B1E32749 /* CitiesModule */,
 				DC497148DE6AEAACC6745935 /* Network */,
 				DC497519B561A4A9311EE75D /* Domain */,
 				DC4976C6492BA47857C80137 /* Config */,
 				DC497044603873FD6E7381FB /* Extension */,
+				9AC1067A288B4FE200D65184 /* Builder */,
 			);
 			path = SignsForCorpus;
 			sourceTree = "<group>";
@@ -228,11 +244,14 @@
 /* Begin PBXProject section */
 		DC49789EFBA6CF9C1882780F /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = DC49765F57B8ADA9DBF4AE71 /* Build configuration list for PBXProject "SignsForCorpus" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = DC49735C359735703FF99793;
@@ -305,7 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC4970CCF3DA6606B0E29D60 /* ViewController.swift in Sources */,
+				DC4970CCF3DA6606B0E29D60 /* CitiesViewController.swift in Sources */,
 				DC4974DA7DBCB46456AB669F /* AppDelegate.swift in Sources */,
 				DC497144F9DB1B53086B63E2 /* SceneDelegate.swift in Sources */,
 				DC497150D02429A97A373211 /* NetworkClient.swift in Sources */,
@@ -316,6 +335,9 @@
 				DC497E28E89CA04592051857 /* Sign.swift in Sources */,
 				DC497A2E29456A2B9439E9FB /* Config.swift in Sources */,
 				DC49758D4F16F01F0A0809CB /* String+HTMLEncoding.swift in Sources */,
+				9AC10679288B4FDF00D65184 /* ModuleBuilder.swift in Sources */,
+				DC4975C1A35E5803641B18CD /* CitiesPresenter.swift in Sources */,
+				9AC10677288B3CAE00D65184 /* UIAlertController+ConvinienceMethods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,8 +393,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -505,6 +526,7 @@
 				DC497AC1AB5DF62DCF0213A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
