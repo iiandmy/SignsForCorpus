@@ -11,4 +11,8 @@ struct Config {
         case russian = 3
         case english = 4
     }
+
+    struct Constants {
+        static let imageMaxSize: CGFloat = 50
+    }
 }

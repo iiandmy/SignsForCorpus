@@ -93,7 +93,9 @@ extension CitiesViewController: UITableViewDataSource, UITableViewDelegate {
         NetworkClient.shared.fetchImage(cityForCell.imageUrl) { image, error in
             if let _ = error { return }
             contentConfiguration.image = image
-            contentConfiguration.imageProperties.maximumSize = CGSize(width: 50, height: 50)
+            contentConfiguration
+                    .imageProperties
+                    .maximumSize = CGSize(width: Config.Constants.imageMaxSize, height: Config.Constants.imageMaxSize)
             cell.contentConfiguration = contentConfiguration
         }
         
