@@ -9,6 +9,7 @@ import UIKit
 
 protocol ModuleBuilderProtocol {
     static func buildCitiesModule() -> UIViewController
+    static func buildSignsModule() -> UIViewController
 }
 
 class ModuleBuilder: ModuleBuilderProtocol {
@@ -17,6 +18,14 @@ class ModuleBuilder: ModuleBuilderProtocol {
         let citiesPresenter = CitiesPresenter(view: citiesVC)
         citiesVC.presenter = citiesPresenter
         let navController = UINavigationController(rootViewController: citiesVC)
+        return navController
+    }
+    
+    static func buildSignsModule() -> UIViewController {
+        let signsVC = SignsViewController()
+        let signsPresenter = SignsPresenter(view: signsVC)
+        signsVC.presenter = signsPresenter
+        let navController = UINavigationController(rootViewController: signsVC)
         return navController
     }
 }
