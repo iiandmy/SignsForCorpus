@@ -6,8 +6,8 @@ import Foundation
 import Alamofire
 
 protocol NetworkClientProtocol {
-    typealias CityResponse = ([CityDTO]?, Error?) -> Void
-    typealias SignResponse = ([SignDTO]?, Error?) -> Void
+    typealias CityResponse = ([City]?, Error?) -> Void
+    typealias SignResponse = ([Sign]?, Error?) -> Void
 
     func fetchCities(completion: @escaping CityResponse)
     func fetchSigns(completion: @escaping SignResponse)
@@ -23,7 +23,7 @@ final class NetworkClient: NetworkClientProtocol {
             .validate()
             .responseDecodable(of: [CityDTO].self) { response in
                 switch response.result {
-                case .success(let city): completion(city, nil)
+                case .success(let city): completion(city.map { $0.toDomain() }, nil)
                 case .failure(let error): completion(nil, error)
                 }
             }
@@ -35,7 +35,7 @@ final class NetworkClient: NetworkClientProtocol {
             .validate()
             .responseDecodable(of: [SignDTO].self) { response in
                 switch response.result {
-                case .success(let sign): completion(sign, nil)
+                case .success(let sign): completion(sign.map { $0.toDomain() }, nil)
                 case .failure(let error): completion(nil, error)
                 }
             }

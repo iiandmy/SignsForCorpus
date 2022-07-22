@@ -10,7 +10,7 @@ struct SignDTO: Codable {
         case name
         case text
         case lang
-        case image = "logo"
+        case imageUrl = "logo"
         case pictures = "images"
     }
 
@@ -18,15 +18,20 @@ struct SignDTO: Codable {
     let name: String
     let text: String
     let lang: Int
-    let image: String
+    let imageUrl: String
     let pictures: [String]
 }
 
 // MARK: Mapping
 
 extension SignDTO {
-    func toDomain() {
-
+    func toDomain() -> Sign {
+        .init(cityId: cityId,
+                name: name,
+                description: String(htmlEncodedString: text) ?? text,
+                lang: Config.Language(rawValue: lang) ?? .english,
+                imageUrl: imageUrl,
+                picturesUrl: pictures)
     }
 }
 
