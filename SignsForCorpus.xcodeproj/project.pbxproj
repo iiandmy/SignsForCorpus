@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DC497000F060B42FDCAC2FB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC49798CD1E07A0B9554DC1B /* ViewController.swift */; };
-		DC4973199F7C8FD1931917F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4974F56821C6AD805E2306 /* Main.storyboard */; };
 		DC49741F959BC771D9A85031 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC4976441B0D6F65ACD6A51F /* LaunchScreen.storyboard */; };
 		DC497533B337EFCABA12E175 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC49709143EAD7ED73BF7546 /* SceneDelegate.swift */; };
 		DC49785BCCEEB621FCD08BAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC497636B3A62D94FE7334B2 /* Assets.xcassets */; };
@@ -23,7 +22,6 @@
 		DC49780FE08C21DA9CE17B9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC49798CD1E07A0B9554DC1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC497BDDBC7BED7D114702E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DC497E37303EA913EC7B21CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,6 @@
 				DC4973C2EA2B68F56331E17C /* Info.plist */,
 				DC49709143EAD7ED73BF7546 /* SceneDelegate.swift */,
 				DC49798CD1E07A0B9554DC1B /* ViewController.swift */,
-				DC4974F56821C6AD805E2306 /* Main.storyboard */,
 			);
 			path = SignsForCorpus;
 			sourceTree = "<group>";
@@ -116,7 +113,6 @@
 			files = (
 				DC49785BCCEEB621FCD08BAD /* Assets.xcassets in Resources */,
 				DC49741F959BC771D9A85031 /* LaunchScreen.storyboard in Resources */,
-				DC4973199F7C8FD1931917F1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,14 +132,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DC4974F56821C6AD805E2306 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DC497E37303EA913EC7B21CC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DC4976441B0D6F65ACD6A51F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -281,7 +269,7 @@
 				INFOPLIST_FILE = SignsForCorpus/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -304,7 +292,7 @@
 				INFOPLIST_FILE = SignsForCorpus/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
