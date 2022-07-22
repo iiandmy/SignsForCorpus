@@ -10,8 +10,12 @@
 		1EED6BFE0EE496820099B178 /* Pods_SignsForCorpus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65FCDB33C029D94F234DB1F /* Pods_SignsForCorpus.framework */; };
 		DC4970CCF3DA6606B0E29D60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC497BA9669702A78A52177A /* ViewController.swift */; };
 		DC497144F9DB1B53086B63E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC497BD5AA9BDDD46D5F93F7 /* SceneDelegate.swift */; };
+		DC497150D02429A97A373211 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4970EE882D8F1BF387BABF /* NetworkClient.swift */; };
 		DC4974DA7DBCB46456AB669F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC49781D6C235D6B61BA7B59 /* AppDelegate.swift */; };
+		DC4975C735352C1B61A5D64D /* SignDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC497A48A9267568B6E9C9B2 /* SignDTO.swift */; };
+		DC4977422D8AB13E1E0F1D65 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC49712E613016FCF9941B41 /* API.swift */; };
 		DC497A32907505C06CB95954 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC497B64740F0A0AE1501B5F /* LaunchScreen.storyboard */; };
+		DC497BD689D4ED02CFCCF110 /* CityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC497A11FEEF389BFD127F01 /* CityDTO.swift */; };
 		DC497D115F8763DB65AC3DB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC4976652DDA858199A0C93B /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -20,9 +24,13 @@
 		7EE35683EBC6D4520C42E6B9 /* Pods-SignsForCorpus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignsForCorpus.release.xcconfig"; path = "Target Support Files/Pods-SignsForCorpus/Pods-SignsForCorpus.release.xcconfig"; sourceTree = "<group>"; };
 		C65FCDB33C029D94F234DB1F /* Pods_SignsForCorpus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignsForCorpus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC497062BB8E80A243D429E1 /* SignsForCorpus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignsForCorpus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC4970EE882D8F1BF387BABF /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		DC49712E613016FCF9941B41 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DC4975E99D4AA5E86E94033D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		DC4976652DDA858199A0C93B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC49781D6C235D6B61BA7B59 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC497A11FEEF389BFD127F01 /* CityDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDTO.swift; sourceTree = "<group>"; };
+		DC497A48A9267568B6E9C9B2 /* SignDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignDTO.swift; sourceTree = "<group>"; };
 		DC497B64740F0A0AE1501B5F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC497BA9669702A78A52177A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC497BD5AA9BDDD46D5F93F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +66,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DC497148DE6AEAACC6745935 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DC4970EE882D8F1BF387BABF /* NetworkClient.swift */,
+				DC49712E613016FCF9941B41 /* API.swift */,
+				DC497BBD25D4DEB17CE4945A /* DTO */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		DC49735C359735703FF99793 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +100,15 @@
 				DC4976652DDA858199A0C93B /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		DC497BBD25D4DEB17CE4945A /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				DC497A11FEEF389BFD127F01 /* CityDTO.swift */,
+				DC497A48A9267568B6E9C9B2 /* SignDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		DC497BF739909853B1E32749 /* CountriesModule */ = {
@@ -115,6 +142,7 @@
 				DC4978C92213A37EB55D2691 /* Resources */,
 				DC497EFAD2C8506D01EC67FF /* BuildFiles */,
 				DC497BF739909853B1E32749 /* CountriesModule */,
+				DC497148DE6AEAACC6745935 /* Network */,
 			);
 			path = SignsForCorpus;
 			sourceTree = "<group>";
@@ -236,6 +264,10 @@
 				DC4970CCF3DA6606B0E29D60 /* ViewController.swift in Sources */,
 				DC4974DA7DBCB46456AB669F /* AppDelegate.swift in Sources */,
 				DC497144F9DB1B53086B63E2 /* SceneDelegate.swift in Sources */,
+				DC497150D02429A97A373211 /* NetworkClient.swift in Sources */,
+				DC4977422D8AB13E1E0F1D65 /* API.swift in Sources */,
+				DC497BD689D4ED02CFCCF110 /* CityDTO.swift in Sources */,
+				DC4975C735352C1B61A5D64D /* SignDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
