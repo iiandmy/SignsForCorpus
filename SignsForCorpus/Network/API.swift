@@ -8,12 +8,12 @@ struct API {
     static let scheme = "https"
     static let host = "krokapp.by"
 
-    enum Paths: String {
+    enum Path: String {
         case cities = "/api/get_cities/11"
         case signs = "/api/get_points/11"
     }
 
-    static func getUrl(forPath path: API.Paths) -> URL {
+    static func getUrl(forPath path: API.Path) -> URL {
         var components = URLComponents()
 
         components.scheme = API.scheme
