@@ -5,6 +5,7 @@
 import Foundation
 
 struct Sign {
+    let id: Int
     let cityId: Int
     let name: String
     let description: String
