@@ -69,7 +69,6 @@ extension SignsViewController: SignsViewProtocol {
         }
     }
     
-    
 }
 
 extension SignsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -84,7 +83,23 @@ extension SignsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->  UITableViewCell {
         let cell = signsTable.dequeueReusableCell(withIdentifier: signsTableIdentifier, for: indexPath)
         
+        guard let signForRow = currentTableState?[indexPath.row] else { return cell }
         
+        var configuration = cell.defaultContentConfiguration()
+        
+        configuration.text = signForRow.name
+        
+        presenter.fetchImage(forUrl: signForRow.imageUrl) { imageData, error in
+            if let _ = error { return }
+            guard let imageData = imageData else { return }
+            configuration.image = UIImage(data: imageData)
+            configuration
+                    .imageProperties
+                    .maximumSize = CGSize(width: Config.Constants.imageMaxSize, height: Config.Constants.imageMaxSize)
+            cell.contentConfiguration = configuration
+        }
+        
+        cell.contentConfiguration = configuration
         
         return cell
     }
