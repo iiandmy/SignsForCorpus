@@ -8,17 +8,18 @@ import Alamofire
 protocol NetworkClientProtocol {
     typealias CityResponse = ([City]?, Error?) -> Void
     typealias SignResponse = ([Sign]?, Error?) -> Void
-    typealias ImageResponse = (UIImage?, Error?) -> Void
+    typealias ImageResponse = (Data?, Error?) -> Void
 
     func fetchCities(completion: @escaping CityResponse)
     func fetchSigns(completion: @escaping SignResponse)
     func fetchImage(_ url: String, completion: @escaping ImageResponse)
 }
 
-final class NetworkClient: NetworkClientProtocol {
-    static let shared = NetworkClient()
-    private init() {}
+protocol Networking {
+    var networkClient: NetworkClientProtocol! { get set }
+}
 
+final class NetworkClient: NetworkClientProtocol {
     func fetchCities(completion: @escaping CityResponse) {
         let url = API.getUrl(forPath: .cities)
         AF.request(url)
@@ -53,7 +54,7 @@ final class NetworkClient: NetworkClientProtocol {
                 }
                 guard let data = data.data else { return }
                 
-                completion(UIImage(data: data), nil)
+                completion(data, nil)
             }
     }
 }
