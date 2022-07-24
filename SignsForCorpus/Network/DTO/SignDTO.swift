@@ -6,6 +6,7 @@ import Foundation
 
 struct SignDTO: Codable {
     private enum CodingKeys: String, CodingKey {
+        case id
         case cityId = "city_id"
         case name
         case text
@@ -14,6 +15,7 @@ struct SignDTO: Codable {
         case pictures = "images"
     }
 
+    let id: Int
     let cityId: Int
     let name: String
     let text: String
@@ -26,9 +28,10 @@ struct SignDTO: Codable {
 
 extension SignDTO {
     func toDomain() -> Sign {
-        .init(cityId: cityId,
+        .init(id: id,
+                cityId: cityId,
                 name: name,
-                description: String(htmlEncodedString: text) ?? text,
+                description: text,
                 lang: Config.Language(rawValue: lang) ?? .english,
                 imageUrl: imageUrl,
                 picturesUrl: pictures)

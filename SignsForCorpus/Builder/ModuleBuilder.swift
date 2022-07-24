@@ -8,15 +8,31 @@
 import UIKit
 
 protocol ModuleBuilderProtocol {
-    static func buildCitiesModule() -> UIViewController
+    func buildCitiesModule(_ router: RouterProtocol) -> UIViewController
+    func buildSignsModule(_ router: RouterProtocol, withSigns signs: [Sign]) -> UIViewController
+    func buildDetailsModule(_ router: RouterProtocol, forSign signId: Int) -> UIViewController
 }
 
 class ModuleBuilder: ModuleBuilderProtocol {
-    static func buildCitiesModule() -> UIViewController {
+    private var networkClient: NetworkClientProtocol = NetworkClient()
+
+    func buildCitiesModule(_ router: RouterProtocol) -> UIViewController {
         let citiesVC = CitiesViewController()
-        let citiesPresenter = CitiesPresenter(view: citiesVC)
+        let citiesPresenter = CitiesPresenter(router, view: citiesVC, networkClient: networkClient)
         citiesVC.presenter = citiesPresenter
-        let navController = UINavigationController(rootViewController: citiesVC)
+        return citiesVC
+    }
+    
+    func buildSignsModule(_ router: RouterProtocol, withSigns signs: [Sign]) -> UIViewController {
+        let signsVC = SignsViewController()
+        let signsPresenter = SignsPresenter(router, view: signsVC,signs: signs, networkClient: networkClient)
+        signsVC.presenter = signsPresenter
+        return signsVC
+    }
+    
+    func buildDetailsModule(_ router: RouterProtocol, forSign signId: Int) -> UIViewController {
+        // MARK: TODO
+        let navController = UINavigationController()
         return navController
     }
 }

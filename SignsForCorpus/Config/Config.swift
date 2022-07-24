@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 struct Config {
     enum Language: Int {

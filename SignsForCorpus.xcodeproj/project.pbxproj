@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1EED6BFE0EE496820099B178 /* Pods_SignsForCorpus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65FCDB33C029D94F234DB1F /* Pods_SignsForCorpus.framework */; };
+		9AB49C7E288B5B1600B4E758 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB49C7D288B5B1600B4E758 /* Router.swift */; };
+		9AB49C83288B5BAB00B4E758 /* SignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB49C82288B5BAB00B4E758 /* SignsViewController.swift */; };
+		9AB49C85288B5C1600B4E758 /* SignsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB49C84288B5C1600B4E758 /* SignsPresenter.swift */; };
 		9AC10677288B3CAE00D65184 /* UIAlertController+ConvinienceMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC10676288B3CAE00D65184 /* UIAlertController+ConvinienceMethods.swift */; };
 		9AC10679288B4FDF00D65184 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC10678288B4FDF00D65184 /* ModuleBuilder.swift */; };
 		DC4970B362F74C090ACF4143 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4972DC32992962B9F772C7 /* City.swift */; };
@@ -29,6 +32,9 @@
 /* Begin PBXFileReference section */
 		2FA7C3838FBDD3710757ECBE /* Pods-SignsForCorpus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignsForCorpus.debug.xcconfig"; path = "Target Support Files/Pods-SignsForCorpus/Pods-SignsForCorpus.debug.xcconfig"; sourceTree = "<group>"; };
 		7EE35683EBC6D4520C42E6B9 /* Pods-SignsForCorpus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignsForCorpus.release.xcconfig"; path = "Target Support Files/Pods-SignsForCorpus/Pods-SignsForCorpus.release.xcconfig"; sourceTree = "<group>"; };
+		9AB49C7D288B5B1600B4E758 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9AB49C82288B5BAB00B4E758 /* SignsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignsViewController.swift; sourceTree = "<group>"; };
+		9AB49C84288B5C1600B4E758 /* SignsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignsPresenter.swift; sourceTree = "<group>"; };
 		9AC10676288B3CAE00D65184 /* UIAlertController+ConvinienceMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+ConvinienceMethods.swift"; sourceTree = "<group>"; };
 		9AC10678288B4FDF00D65184 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		C65FCDB33C029D94F234DB1F /* Pods_SignsForCorpus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignsForCorpus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +75,39 @@
 				7EE35683EBC6D4520C42E6B9 /* Pods-SignsForCorpus.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9AB49C7C288B5B0C00B4E758 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9AB49C7D288B5B1600B4E758 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9AB49C7F288B5B8C00B4E758 /* SignsModule */ = {
+			isa = PBXGroup;
+			children = (
+				9AB49C81288B5B9B00B4E758 /* Presenter */,
+				9AB49C80288B5B9700B4E758 /* View */,
+			);
+			path = SignsModule;
+			sourceTree = "<group>";
+		};
+		9AB49C80288B5B9700B4E758 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9AB49C82288B5BAB00B4E758 /* SignsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9AB49C81288B5B9B00B4E758 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9AB49C84288B5C1600B4E758 /* SignsPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		9AC1067A288B4FE200D65184 /* Builder */ = {
@@ -186,6 +225,8 @@
 		DC497DFA89ED7D7030CAE72A /* SignsForCorpus */ = {
 			isa = PBXGroup;
 			children = (
+				9AB49C7F288B5B8C00B4E758 /* SignsModule */,
+				9AB49C7C288B5B0C00B4E758 /* Router */,
 				DC4978C92213A37EB55D2691 /* Resources */,
 				DC497EFAD2C8506D01EC67FF /* BuildFiles */,
 				DC497BF739909853B1E32749 /* CitiesModule */,
@@ -324,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB49C85288B5C1600B4E758 /* SignsPresenter.swift in Sources */,
 				DC4970CCF3DA6606B0E29D60 /* CitiesViewController.swift in Sources */,
 				DC4974DA7DBCB46456AB669F /* AppDelegate.swift in Sources */,
 				DC497144F9DB1B53086B63E2 /* SceneDelegate.swift in Sources */,
@@ -331,6 +373,8 @@
 				DC4977422D8AB13E1E0F1D65 /* API.swift in Sources */,
 				DC497BD689D4ED02CFCCF110 /* CityDTO.swift in Sources */,
 				DC4975C735352C1B61A5D64D /* SignDTO.swift in Sources */,
+				9AB49C83288B5BAB00B4E758 /* SignsViewController.swift in Sources */,
+				9AB49C7E288B5B1600B4E758 /* Router.swift in Sources */,
 				DC4970B362F74C090ACF4143 /* City.swift in Sources */,
 				DC497E28E89CA04592051857 /* Sign.swift in Sources */,
 				DC497A2E29456A2B9439E9FB /* Config.swift in Sources */,
