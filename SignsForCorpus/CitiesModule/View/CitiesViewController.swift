@@ -30,7 +30,7 @@ class CitiesViewController: UIViewController {
         title = "Cities"
         setupUI()
         setupConstraints()
-        presenter.fetch()
+        presenter.fetchData()
     }
     
     private func setupUI() {
@@ -80,6 +80,11 @@ extension CitiesViewController: UITableViewDataSource, UITableViewDelegate {
         
         return currentState.count
     }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cityForCell = citiesTableCurrentState?[indexPath.row] else { return }
+        presenter.presentSigns(forCity: cityForCell.id)
+    }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = citiesTable.dequeueReusableCell(withIdentifier: citiesCellIdentifier, for: indexPath)
@@ -90,9 +95,11 @@ extension CitiesViewController: UITableViewDataSource, UITableViewDelegate {
         
         contentConfiguration.text = cityForCell.name
         contentConfiguration.secondaryText = cityForCell.region
-        NetworkClient.shared.fetchImage(cityForCell.imageUrl) { image, error in
+        
+        presenter.fetchImage(forUrl: cityForCell.imageUrl) { imageData, error in
             if let _ = error { return }
-            contentConfiguration.image = image
+            guard let imageData = imageData else { return }
+            contentConfiguration.image = UIImage(data: imageData)
             contentConfiguration
                     .imageProperties
                     .maximumSize = CGSize(width: Config.Constants.imageMaxSize, height: Config.Constants.imageMaxSize)
