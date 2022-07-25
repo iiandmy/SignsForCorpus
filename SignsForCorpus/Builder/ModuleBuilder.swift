@@ -10,7 +10,7 @@ import UIKit
 protocol ModuleBuilderProtocol {
     func buildCitiesModule(_ router: RouterProtocol) -> UIViewController
     func buildSignsModule(_ router: RouterProtocol, withSigns signs: [Sign]) -> UIViewController
-    func buildDetailsModule(_ router: RouterProtocol, forSign signId: Int) -> UIViewController
+    func buildDetailsModule(_ router: RouterProtocol, forSign sign: Sign) -> UIViewController
 }
 
 class ModuleBuilder: ModuleBuilderProtocol {
@@ -30,9 +30,10 @@ class ModuleBuilder: ModuleBuilderProtocol {
         return signsVC
     }
     
-    func buildDetailsModule(_ router: RouterProtocol, forSign signId: Int) -> UIViewController {
-        // MARK: TODO
-        let navController = UINavigationController()
-        return navController
+    func buildDetailsModule(_ router: RouterProtocol, forSign sign: Sign) -> UIViewController {
+        let descriptionVC = DescriptionViewController()
+        let descriptionPresenter = DescriptionPresenter(router, view: descriptionVC, sign: sign, networkClient: networkClient)
+        descriptionVC.presenter = descriptionPresenter
+        return descriptionVC
     }
 }

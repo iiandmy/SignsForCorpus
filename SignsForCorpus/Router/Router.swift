@@ -16,7 +16,7 @@ protocol RouterMain {
 protocol RouterProtocol: RouterMain {
     func initialViewController()
     func showSigns(_ signs: [Sign])
-    func showMore(forSign signId: Int)
+    func showMore(forSign sign: Sign)
     func popToRoot()
 }
 
@@ -47,9 +47,9 @@ class Router: RouterProtocol {
         navigationController.pushViewController(signsController, animated: true)
     }
     
-    func showMore(forSign signId: Int) {
+    func showMore(forSign sign: Sign) {
         guard let navigationController = navigationController else { return }
-        guard let detailsController = moduleBuilder?.buildDetailsModule(self, forSign: signId) else { return }
+        guard let detailsController = moduleBuilder?.buildDetailsModule(self, forSign: sign) else { return }
         
         navigationController.pushViewController(detailsController, animated: true)
     }
