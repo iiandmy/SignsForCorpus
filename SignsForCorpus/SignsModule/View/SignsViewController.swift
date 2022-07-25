@@ -80,6 +80,10 @@ extension SignsViewController: UITableViewDelegate, UITableViewDataSource {
         return state.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.showDescription(forSign: (currentTableState?[indexPath.row])!)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->  UITableViewCell {
         let cell = signsTable.dequeueReusableCell(withIdentifier: signsTableIdentifier, for: indexPath)
         

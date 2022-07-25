@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1EED6BFE0EE496820099B178 /* Pods_SignsForCorpus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C65FCDB33C029D94F234DB1F /* Pods_SignsForCorpus.framework */; };
+		9A53CF16288E0CEF00D2E3B3 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53CF15288E0CEF00D2E3B3 /* DescriptionViewController.swift */; };
+		9A53CF18288E0CFB00D2E3B3 /* DescriptionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A53CF17288E0CFB00D2E3B3 /* DescriptionPresenter.swift */; };
 		9AB49C7E288B5B1600B4E758 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB49C7D288B5B1600B4E758 /* Router.swift */; };
 		9AB49C83288B5BAB00B4E758 /* SignsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB49C82288B5BAB00B4E758 /* SignsViewController.swift */; };
 		9AB49C85288B5C1600B4E758 /* SignsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB49C84288B5C1600B4E758 /* SignsPresenter.swift */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		2FA7C3838FBDD3710757ECBE /* Pods-SignsForCorpus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignsForCorpus.debug.xcconfig"; path = "Target Support Files/Pods-SignsForCorpus/Pods-SignsForCorpus.debug.xcconfig"; sourceTree = "<group>"; };
 		7EE35683EBC6D4520C42E6B9 /* Pods-SignsForCorpus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignsForCorpus.release.xcconfig"; path = "Target Support Files/Pods-SignsForCorpus/Pods-SignsForCorpus.release.xcconfig"; sourceTree = "<group>"; };
+		9A53CF15288E0CEF00D2E3B3 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		9A53CF17288E0CFB00D2E3B3 /* DescriptionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionPresenter.swift; sourceTree = "<group>"; };
 		9AB49C7D288B5B1600B4E758 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9AB49C82288B5BAB00B4E758 /* SignsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignsViewController.swift; sourceTree = "<group>"; };
 		9AB49C84288B5C1600B4E758 /* SignsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignsPresenter.swift; sourceTree = "<group>"; };
@@ -75,6 +79,31 @@
 				7EE35683EBC6D4520C42E6B9 /* Pods-SignsForCorpus.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9A53CF12288E0CD500D2E3B3 /* DescriptionModule */ = {
+			isa = PBXGroup;
+			children = (
+				9A53CF14288E0CE200D2E3B3 /* Presenter */,
+				9A53CF13288E0CDE00D2E3B3 /* View */,
+			);
+			path = DescriptionModule;
+			sourceTree = "<group>";
+		};
+		9A53CF13288E0CDE00D2E3B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A53CF15288E0CEF00D2E3B3 /* DescriptionViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9A53CF14288E0CE200D2E3B3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9A53CF17288E0CFB00D2E3B3 /* DescriptionPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		9AB49C7C288B5B0C00B4E758 /* Router */ = {
@@ -225,6 +254,7 @@
 		DC497DFA89ED7D7030CAE72A /* SignsForCorpus */ = {
 			isa = PBXGroup;
 			children = (
+				9A53CF12288E0CD500D2E3B3 /* DescriptionModule */,
 				9AB49C7F288B5B8C00B4E758 /* SignsModule */,
 				9AB49C7C288B5B0C00B4E758 /* Router */,
 				DC4978C92213A37EB55D2691 /* Resources */,
@@ -380,8 +410,10 @@
 				DC497A2E29456A2B9439E9FB /* Config.swift in Sources */,
 				DC49758D4F16F01F0A0809CB /* String+HTMLEncoding.swift in Sources */,
 				9AC10679288B4FDF00D65184 /* ModuleBuilder.swift in Sources */,
+				9A53CF16288E0CEF00D2E3B3 /* DescriptionViewController.swift in Sources */,
 				DC4975C1A35E5803641B18CD /* CitiesPresenter.swift in Sources */,
 				9AC10677288B3CAE00D65184 /* UIAlertController+ConvinienceMethods.swift in Sources */,
+				9A53CF18288E0CFB00D2E3B3 /* DescriptionPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
