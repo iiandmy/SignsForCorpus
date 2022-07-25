@@ -9,9 +9,11 @@ import Foundation
 import UIKit
 
 protocol SignsPresenterProtocol: Routing, Networking {
+    typealias ImageResponse = (Data?, Error?) -> Void
     var view: SignsViewProtocol! { get set }
     var signs: [Sign]! { get set }
-    func fetchImage(forUrl url: String, completion: @escaping (Data?, Error?) -> Void)
+    func fetchImage(forUrl url: String, completion: @escaping ImageResponse)
+    func showDescription(forSign sign: Sign)
 }
 
 class SignsPresenter: SignsPresenterProtocol {
@@ -30,5 +32,9 @@ class SignsPresenter: SignsPresenterProtocol {
     
     func fetchImage(forUrl url: String, completion: @escaping (Data?, Error?) -> Void) {
         networkClient.fetchImage(url, completion: completion)
+    }
+    
+    func showDescription(forSign sign: Sign) {
+        router.showMore(forSign: sign)
     }
 }
